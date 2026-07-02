@@ -26,3 +26,63 @@ function createHeart() {
 }
 
 setInterval(createHeart, 500);
+// ===============================
+// SHOW PAGE
+// ===============================
+
+function showPage(pageNumber){
+
+    document.querySelectorAll(".page").forEach(page=>{
+        page.classList.remove("active");
+    });
+
+    document
+        .getElementById("page"+pageNumber)
+        .classList.add("active");
+
+}
+// ===============================
+// QUIZ
+// ===============================
+
+function checkQuiz(){
+
+    const q1 = document.getElementById("q1").value.trim().toLowerCase();
+
+    const q2 = document.getElementById("q2").value.trim().toLowerCase();
+
+    const q3 = document.getElementById("q3").value.trim().toLowerCase();
+
+    const q4 = document.getElementById("q4").value.trim().toLowerCase();
+
+    if(
+
+        q1==="yellow" &&
+
+        q2==="school" &&
+
+        q3==="babe" &&
+
+        (
+            q4==="19th of december" ||
+            q4==="19 december" ||
+            q4==="december 19" ||
+            q4==="19/12" ||
+            q4==="19-12"
+        )
+
+    ){
+
+        alert("Access Granted ❤️");
+
+        showPage(2);
+
+    }
+
+    else{
+
+        alert("Oopsiee 🥺\n\nWrong answer.\nTry again babyyyy ❤️");
+
+    }
+
+}
