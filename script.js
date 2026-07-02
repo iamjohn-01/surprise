@@ -86,3 +86,24 @@ function checkQuiz(){
     }
 
 }
+// ===============================
+// OPEN GIFT
+// ===============================
+
+function openGift(){
+
+    const gift=document.querySelector(".gift");
+
+    gift.innerHTML="💖";
+
+    gift.style.transform="scale(1.4)";
+
+    gift.style.animation="none";
+
+    setTimeout(()=>{
+
+        showPage(3);
+
+    },1200);
+
+}
