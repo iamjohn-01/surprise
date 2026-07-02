@@ -116,79 +116,17 @@ const bgMusic = document.getElementById("bgMusic");
 const voiceNote = document.getElementById("voiceNote");
 const nextBtn = document.getElementById("nextBtn");
 
-function startAnniversaryPage(){
-
-    if(bgMusic){
-
-        bgMusic.volume = 0.5;
-
-        bgMusic.play().catch(()=>{});
-
-    }
-
-    // Wait 12 seconds before the voice note
-    setTimeout(()=>{
-
-        if(bgMusic){
-
-            bgMusic.volume = 0.15;
-
-        }
-
-        if(voiceNote){
-
-            voiceNote.play().catch(()=>{});
-
-        }
-
-    },12000);
-
-    if(voiceNote){
-
-        voiceNote.onended = function(){
-
-            nextBtn.style.display = "inline-block";
-
-        };
-
-    }
-
-}
-// ===============================
-// MUSIC & VOICE NOTE
-// ===============================
-
-const bgMusic = document.getElementById("bgMusic");
-const voiceNote = document.getElementById("voiceNote");
-const nextBtn = document.getElementById("nextBtn");
-
 function startAnniversaryPage() {
 
-    // Start the background music
     if (bgMusic) {
         bgMusic.volume = 0.5;
         bgMusic.play().catch(() => {});
     }
 
-    // After 12 seconds, lower music and play voice note
     setTimeout(() => {
 
         if (bgMusic) {
-
-            // Smoothly reduce volume
-            let volume = bgMusic.volume;
-
-            const fade = setInterval(() => {
-
-                if (volume > 0.15) {
-                    volume -= 0.05;
-                    bgMusic.volume = volume;
-                } else {
-                    clearInterval(fade);
-                }
-
-            }, 250);
-
+            bgMusic.volume = 0.15;
         }
 
         if (voiceNote) {
@@ -197,26 +135,19 @@ function startAnniversaryPage() {
 
     }, 12000);
 
-    // When the voice note finishes
     if (voiceNote) {
-
         voiceNote.onended = function () {
-
             nextBtn.style.display = "inline-block";
-
-            nextBtn.classList.add("fadeIn");
-
         };
-
     }
-
 }
+
 // ===============================
 // CONTINUE BUTTON
 // ===============================
 
-nextBtn.onclick = function () {
-
-    showPage(4);
-
-};
+if (nextBtn) {
+    nextBtn.onclick = function () {
+        showPage(4);
+    };
+    }
