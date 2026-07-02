@@ -152,3 +152,83 @@ if (nextBtn) {
         showPage(4);
     };
     }
+
+// ==========================
+// LETTER
+// ==========================
+
+const anniversaryLetter = `HAPPY 2 YEARS ANNIVERSARY TO MY HUBBY, ADEBOYE SAMUEL OLUWATOBILOBA ❤️
+
+Wow...
+
+Two whole years already.
+
+Thank you for every laugh,
+every prayer,
+every memory,
+every late-night call,
+every smile...
+
+Thank you for choosing us.
+
+Happy 2 Years Anniversary.
+
+I love you today,
+tomorrow,
+and every day after that. ❤️`;
+
+function showLetter(){
+
+const envelope=document.getElementById("envelope");
+
+const letter=document.getElementById("letter");
+
+envelope.classList.add("open");
+
+setTimeout(()=>{
+
+envelope.style.display="none";
+
+letter.style.display="block";
+
+typeWriter();
+
+},900);
+
+}
+
+function typeWriter(){
+
+const letter=document.getElementById("letter");
+
+let i=0;
+
+letter.innerHTML="";
+
+const speed=28;
+
+function typing(){
+
+if(i<anniversaryLetter.length){
+
+letter.innerHTML+=anniversaryLetter.charAt(i);
+
+i++;
+
+setTimeout(typing,speed);
+
+}else{
+
+setTimeout(()=>{
+
+showPage(6);
+
+},4000);
+
+}
+
+}
+
+typing();
+
+            }
