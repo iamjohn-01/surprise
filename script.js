@@ -157,25 +157,45 @@ if (nextBtn) {
 // LETTER
 // ==========================
 
-const anniversaryLetter = `HAPPY 2 YEARS ANNIVERSARY TO MY HUBBY, ADEBOYE SAMUEL OLUWATOBILOBA ❤️
+HAPPY 2 YEARS ANNIVERSARY TO MY HUBBY, ADEBOYE SAMUEL OLUWATOBILOBA🥹❤️
 
-Wow...
+Wow, Omo, TWO whole YEARS already(imagine me smiling and dancing one weird dance in a happy mood🙈😂). Sometimes it feels like yesterday, and other times it feels like we've known each other forever(we have actually🤭❤️)
+These past two years haven't been perfect tho'🤧we've had our happy moments, our misunderstandings, our stubborn moments (yes, I'm looking at you👀😂), our tears, our laughter, and even times when we didn't know what to do with each other🤧buh through it all, we're still here, and I think that's something beautiful and I'd never trade it for anything in this world🥹💫
+Thank you for loving me 🥹, for choosing me🤭, for being patient with me🫠, and for growing with me🤗. Thank you for the memories we've shared, the calls that lasted for hours😫, the random jokes, the sweet moments🙈, and even the difficult conversations that helped us understand each other better🥲
+You annoy me sometimes ngl🌚, you can be very stubborn at times, there are days that I'd be like "this boy, be serious nau😭😂", buh despite all that, you're still one of the best things that has ever happened to me😫❤️
+I won't pretend we've always gotten everything right, buh I'm grateful that we've continued to learn, forgive, and keep showing up for each other🫠That's one of the things I admire most about us fr🥰
+Thank you for being my baby, my safe place, my best friend, my partner in crime(not real crime oo😏), my personal Pastor(Pastor Samuel😁), my personal doctor, my personal person, and one of my biggest answered prayers 🙃😁
+Here's to the memories we've made, the lessons we've learned, the growth we've experienced, and the beautiful moments still waiting for us🥹
+Honestly, if someone had told me two years ago that a certain stubborn boy would become this important to me, I would have laughed and said "abeg shift"😂I love you sooo much tho'😌🤗❤️
+Yet here we are🥹
+Two years of memories💫
+Two years of laughter🙃
+Two years of random conversations🥹
+Two years of learning each other🫠
+Two years of loving each other🤗❤️
+And even though these two years haven't been perfect, I wouldn't erase a single part of our story😌
+We've had moments when we couldn't stop smiling because of each other🤭I love those moments😫❤️
+We've had moments when we annoyed each other🥲(I kinda like annoying you tho'🤧😂)
+We've had misunderstandings, disagreements, emotional conversations, and times when we didn't always know the right thing to say buh somehow, we always found our way back to each other🥹💫🙃and I think that's one of my favorite things about us🫠
+Thank you for staying🌚
+Thank you for choosing us even when things weren't easy🥲
+Thank you for the prayers and always supporting me🫠💞
+Thank you for the effort you've made, the love you've given me, the memories we've created, and the people we've grown into🤭I'm so proud of us😌❤️
+You've made me laugh when I wanted to be upset and you've made me smile when I didn't want to🥺🤗❤️
+You've given me so many moments I'll carry in my heart for a very long time♾️
+And even though I tease you a lot🤭, I hope you know how much I genuinely appreciate you💋💋💋💋
+You are so much more special to me than I sometimes know how to put into words🌚
+I love how you love me🙈
+I love your efforts in everything😁
+I love the way you care🤗
+And yes🤧I even love that stubborn side of you sometimes🌚😂❤️
+Thank you for being part of my life❤️
+Thank you for being one of the most beautiful chapters of my story🤭💫❤️
+No matter how many months, years, memories, or adventures come after this, I will always be grateful for the day our story began and God will continue to bless and guide us🙏❤️
+We've been through real things buh if I had to choose again, I'd still choose you😌❤️❤️❤️
 
-Two whole years already.
-
-Thank you for every laugh,
-every prayer,
-every memory,
-every late-night call,
-every smile...
-
-Thank you for choosing us.
-
-Happy 2 Years Anniversary.
-
-I love you today,
-tomorrow,
-and every day after that. ❤️`;
+Happy 2 years to us, my sweetheart💋❤️
+I love you today, tomorrow, and every day after that🥹♾️❤️
 
 function showLetter(){
 
@@ -232,3 +252,36 @@ showPage(6);
 typing();
 
             }
+
+function finishStory(){
+
+    alert("🥹❤️\n\nNow go and hug your girlfriend.\n\nShe's probably smiling while waiting for your reaction. ❤️");
+
+    // Fade out the music nicely
+    const music = document.getElementById("bgMusic");
+
+    if(music){
+
+        let volume = music.volume;
+
+        const fade = setInterval(()=>{
+
+            if(volume > 0.05){
+
+                volume -= 0.05;
+
+                music.volume = volume;
+
+            }else{
+
+                clearInterval(fade);
+
+                music.pause();
+
+            }
+
+        },300);
+
+    }
+
+    }
