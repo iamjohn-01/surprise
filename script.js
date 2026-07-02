@@ -241,9 +241,9 @@ setTimeout(typing,speed);
 
 setTimeout(()=>{
 
-showPage(6);
+letter.innerHTML += "<br><br><button onclick='showPage(6)'>Continue ❤️</button>";
 
-},4000);
+},1500);
 
 }
 
