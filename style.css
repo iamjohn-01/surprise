@@ -44,7 +44,7 @@ PAGE SETTINGS
 
     padding:60px 20px;
 
-    display:flex;
+    display:none;
 
     flex-direction:column;
 
@@ -70,6 +70,7 @@ PAGE SETTINGS
 
     visibility:visible;
 
+    display:flex;
 }
 
 /* =======================================
