@@ -90,21 +90,22 @@ function checkQuiz(){
 // OPEN GIFT
 // ===============================
 
-function openGift(){
+function openGift() {
 
-    const gift=document.querySelector(".gift");
+    const gift = document.querySelector(".gift");
 
-    gift.innerHTML="💖";
+    gift.innerHTML = "💖";
 
-    gift.style.transform="scale(1.4)";
+    gift.style.transform = "scale(1.4)";
+    gift.style.animation = "none";
 
-    gift.style.animation="none";
-
-    setTimeout(()=>{
+    setTimeout(() => {
 
         showPage(3);
 
-    },1200);
+        startAnniversaryPage();
+
+    }, 1200);
 
 }
 // ===============================
@@ -153,3 +154,69 @@ function startAnniversaryPage(){
     }
 
 }
+// ===============================
+// MUSIC & VOICE NOTE
+// ===============================
+
+const bgMusic = document.getElementById("bgMusic");
+const voiceNote = document.getElementById("voiceNote");
+const nextBtn = document.getElementById("nextBtn");
+
+function startAnniversaryPage() {
+
+    // Start the background music
+    if (bgMusic) {
+        bgMusic.volume = 0.5;
+        bgMusic.play().catch(() => {});
+    }
+
+    // After 12 seconds, lower music and play voice note
+    setTimeout(() => {
+
+        if (bgMusic) {
+
+            // Smoothly reduce volume
+            let volume = bgMusic.volume;
+
+            const fade = setInterval(() => {
+
+                if (volume > 0.15) {
+                    volume -= 0.05;
+                    bgMusic.volume = volume;
+                } else {
+                    clearInterval(fade);
+                }
+
+            }, 250);
+
+        }
+
+        if (voiceNote) {
+            voiceNote.play().catch(() => {});
+        }
+
+    }, 12000);
+
+    // When the voice note finishes
+    if (voiceNote) {
+
+        voiceNote.onended = function () {
+
+            nextBtn.style.display = "inline-block";
+
+            nextBtn.classList.add("fadeIn");
+
+        };
+
+    }
+
+}
+// ===============================
+// CONTINUE BUTTON
+// ===============================
+
+nextBtn.onclick = function () {
+
+    showPage(4);
+
+};
