@@ -945,3 +945,66 @@ opacity:0;
     }
 
 }
+
+/* ==========================
+ENVELOPE
+========================== */
+
+#envelope{
+
+width:220px;
+height:140px;
+background:#ff4f8b;
+margin:40px auto;
+border-radius:12px;
+cursor:pointer;
+position:relative;
+transition:.8s;
+
+}
+
+.flap{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:70px;
+background:#ff7cab;
+clip-path:polygon(0 0,100% 0,50% 100%);
+transition:.8s;
+
+}
+
+.letter-icon{
+
+font-size:60px;
+text-align:center;
+line-height:140px;
+
+}
+
+.open .flap{
+
+transform:rotateX(180deg);
+
+}
+
+#letter{
+
+max-width:750px;
+margin:40px auto;
+padding:30px;
+background:white;
+border-radius:20px;
+box-shadow:0 10px 40px rgba(0,0,0,.15);
+
+display:none;
+
+white-space:pre-wrap;
+
+font-size:18px;
+
+line-height:1.9;
+
+   }
