@@ -914,3 +914,34 @@ opacity:0;
 }
 
 }
+#nextBtn{
+
+    display:none;
+
+    margin-top:35px;
+
+}
+
+.fadeIn{
+
+    animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
