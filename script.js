@@ -107,3 +107,49 @@ function openGift(){
     },1200);
 
 }
+// ===============================
+// PAGE 3 AUDIO
+// ===============================
+
+const bgMusic = document.getElementById("bgMusic");
+const voiceNote = document.getElementById("voiceNote");
+const nextBtn = document.getElementById("nextBtn");
+
+function startAnniversaryPage(){
+
+    if(bgMusic){
+
+        bgMusic.volume = 0.5;
+
+        bgMusic.play().catch(()=>{});
+
+    }
+
+    // Wait 12 seconds before the voice note
+    setTimeout(()=>{
+
+        if(bgMusic){
+
+            bgMusic.volume = 0.15;
+
+        }
+
+        if(voiceNote){
+
+            voiceNote.play().catch(()=>{});
+
+        }
+
+    },12000);
+
+    if(voiceNote){
+
+        voiceNote.onended = function(){
+
+            nextBtn.style.display = "inline-block";
+
+        };
+
+    }
+
+}
