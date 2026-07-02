@@ -157,6 +157,7 @@ if (nextBtn) {
 // LETTER
 // ==========================
 
+const anniversaryLetter = `
 HAPPY 2 YEARS ANNIVERSARY TO MY HUBBY, ADEBOYE SAMUEL OLUWATOBILOBA🥹❤️
 
 Wow, Omo, TWO whole YEARS already(imagine me smiling and dancing one weird dance in a happy mood🙈😂). Sometimes it feels like yesterday, and other times it feels like we've known each other forever(we have actually🤭❤️)
@@ -196,6 +197,7 @@ We've been through real things buh if I had to choose again, I'd still choose yo
 
 Happy 2 years to us, my sweetheart💋❤️
 I love you today, tomorrow, and every day after that🥹♾️❤️
+`;
 
 function showLetter(){
 
